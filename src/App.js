@@ -2,24 +2,23 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React with Tanmoy
-        </a>
-      </header>
-    </div>
-  );
+  function formatUser(user){
+    return user.firstname + " " + user.lastname;
+  }
+
+  function getGreeting(user) {
+    if (user){
+      return <h1>Hello, {formatUser(user)}</h1>
+    }
+    return <h1>Hello, Stranger!!!</h1>
+  }
+
+  const user = {
+    firstname: "Tanmoy",
+    lastname: "Das",
+  };
+  // const element = <h1>Hello, World and welcome to ReactJs</h1>
+  return <div>{getGreeting(user)}</div>;
 }
 
 export default App;
