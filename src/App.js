@@ -6,9 +6,15 @@ function App() {
   // function formatUser(user){
   //   return user.firstname + " " + user.lastname;
   // }
+  const userInfo ={
+    firstname:"Tanmoy",
+    lastname: "Das"
+  }
   return(
     <>
-      <Welcome />
+      <Welcome  user="Mukseh"/>
+      <Welcome  user="Dipesh"/>
+      <Welcome  user="Jagdish"/>
     </>
   );
 
