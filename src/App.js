@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Welcome from './components/Welcome';
+import Clock from './components/Clock';
 
 function App() {
   // function formatUser(user){
@@ -12,10 +13,13 @@ function App() {
   }
   return(
     <>
-      <Welcome  user="Mukseh"/>
+    <Clock />
+     {/* <Welcome  user="Mukseh"/>
       <Welcome  user="Dipesh"/>
-      <Welcome  user="Jagdish"/>
+      <Welcome  user="Jagdish"/> */}
     </>
+     
+    
   );
 
 }
