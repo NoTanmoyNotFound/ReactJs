@@ -1,9 +1,12 @@
+import { useState, useEffect} from 'react';
 import logo from './logo.svg';
+
 import './App.css';
 import Welcome from './components/Welcome';
 import Clock from './components/Clock';
 
 function App() {
+  const [flag, setFlag] = useState(true);
   // function formatUser(user){
   //   return user.firstname + " " + user.lastname;
   // }
@@ -11,9 +14,19 @@ function App() {
     firstname:"Tanmoy",
     lastname: "Das"
   }
+
+  const toggle = () =>{
+    console.log("Toggle Clicked");
+    setFlag(!flag);
+  }
+
+
   return(
     <>
-    <Clock />
+    {/* <button onClick={() => setFlag(!flag)}>Toggle Clock Component</button> */}
+    {/* if you want dont make to define toggle ..define it inside the onClick  */}
+    <button onClick={toggle}>Toggle Clock Component</button>
+    {flag ? <Clock /> : "No Clock component"}
      {/* <Welcome  user="Mukseh"/>
       <Welcome  user="Dipesh"/>
       <Welcome  user="Jagdish"/> */}
