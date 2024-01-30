@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import Welcome from './components/Welcome';
 import Clock from './components/Clock';
+import LoginControl from './components/LoginControl';
 
 function App() {
   const [flag, setFlag] = useState(true);
@@ -23,10 +24,13 @@ function App() {
 
   return(
     <>
+
+    <LoginControl />
+    {/* <button onClick={toggle}>Toggle Clock Component</button>
+    {flag ? <Clock /> : "No Clock component"} */}
     {/* <button onClick={() => setFlag(!flag)}>Toggle Clock Component</button> */}
     {/* if you want dont make to define toggle ..define it inside the onClick  */}
-    <button onClick={toggle}>Toggle Clock Component</button>
-    {flag ? <Clock /> : "No Clock component"}
+    
      {/* <Welcome  user="Mukseh"/>
       <Welcome  user="Dipesh"/>
       <Welcome  user="Jagdish"/> */}
