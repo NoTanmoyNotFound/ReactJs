@@ -11,10 +11,7 @@ function App() {
   // function formatUser(user){
   //   return user.firstname + " " + user.lastname;
   // }
-  const userInfo ={
-    firstname:"Tanmoy",
-    lastname: "Das"
-  }
+  
 
   const toggle = () =>{
     console.log("Toggle Clicked");
