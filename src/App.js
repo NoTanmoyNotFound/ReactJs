@@ -5,6 +5,25 @@ import './App.css';
 import Welcome from './components/Welcome';
 import Clock from './components/Clock';
 import LoginControl from './components/LoginControl';
+import Blog from './components/Blog';
+
+const posts= [
+  {
+    id :1,
+    title :"Hello world",
+    content: "welcome to learning react",
+  },
+  {
+    id :2,
+    title: "Installation",
+    content: "You can install react form nmp",
+  },
+  {
+    id :3,
+    title :"Run App",
+    content: "You can run app form npm start",
+  },
+];
 
 function App() {
   const [flag, setFlag] = useState(true);
@@ -22,7 +41,8 @@ function App() {
   return(
     <>
 
-    <LoginControl />
+    <Blog posts={posts}/>
+    {/* <LoginControl /> */}
     {/* <button onClick={toggle}>Toggle Clock Component</button>
     {flag ? <Clock /> : "No Clock component"} */}
     {/* <button onClick={() => setFlag(!flag)}>Toggle Clock Component</button> */}
