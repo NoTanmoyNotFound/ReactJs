@@ -6,6 +6,7 @@ import Welcome from './components/Welcome';
 import Clock from './components/Clock';
 import LoginControl from './components/LoginControl';
 import Blog from './components/Blog';
+import Form from './components/Form';
 
 const posts= [
   {
@@ -40,8 +41,8 @@ function App() {
 
   return(
     <>
-
-    <Blog posts={posts}/>
+    <Form />
+    {/* <Blog posts={posts}/> */}
     {/* <LoginControl /> */}
     {/* <button onClick={toggle}>Toggle Clock Component</button>
     {flag ? <Clock /> : "No Clock component"} */}
